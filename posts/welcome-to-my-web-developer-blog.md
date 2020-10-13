@@ -1,10 +1,22 @@
 ---
-title: '今後の展開'
-tags: ["react", "vscode", "git", "css", "python", "ruby", "java", "angular", "html", "php", "mongodb", "graphql", "gatsby" ]
+tags:
+  - react
+  - vscode
+  - git
+  - css
+  - python
+  - ruby
+  - java
+  - angular
+  - html
+  - php
+  - mongodb
+  - graphql
+  - gatsby
 published: true
-date: '2018-08-20'
+date: 2020-10-13T04:54:23.517Z
+title: 今後の展開について
 ---
-
 コンクリート@iは、製造、運搬、受入、打込み・締固め、仕上げ、打継面の処理、養生、検査と<br>
 いったコンクリート工事の一連の作業の中で、コンクリートの状態をリアルタイムでデータ化・<br>
 見える化し、その場で状況に応じたアクションを起こせるようにするシステムです。<br>
@@ -23,7 +35,6 @@ date: '2018-08-20'
 して全社で共有し、さらに、昇華させることで，弊社が施工するコンクリート構造物の品質を向<br>
 上させていきます。<br>
 
-
-![](../../../src/images/gatsby-icon.png)
+![](public\static\4a9773549091c227cd2eb82ccd9c5e3a/CONCRETE@i_001.png)
 
 Inline images in markdown supported as well.
