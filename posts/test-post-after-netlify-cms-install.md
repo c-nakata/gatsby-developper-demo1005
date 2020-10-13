@@ -4,9 +4,18 @@ tags:
   - gatsby
 published: true
 date: 2020-01-05T13:54:07.809Z
-title: Test Post After Netlify CMS Install
+title: コンクリート@iのデータプラットフォーム構想について，以下の手順で進める。
 ---
 *Crossing Fingers...*
 
-Looks like we've gotten the cms working, folks. Give it a try!
+手順1「コンクリート@アイ」のサークルに従い，一現場を対象として①～⑨に該当するデータを<br>
+「データプラットフォーム」に収集する。<br>
+
+その際，コンクリート@アイの要素技術が適用できるものについては，積極的に活用する。<br>
+
+手順２<br>
+一通りデータが「データプラットフォーム」に収集された時点で，①～⑨のデータ間の相関について<br>
+分析する。<br>
+
+相関が高いものをピックアップし，PDCA サイクルを回し，次の施工・現場へフィードバックする。<br>
 

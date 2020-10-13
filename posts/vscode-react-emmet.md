@@ -1,10 +1,47 @@
 ---
-title: 'Using Emmet with React in Visual Studio Code - 2019'
+title: '１．手順１について'
 tags: ["react", "vscode"]
 published: true
 date: '2019-03-20'
 ---
 
-Curabitur tincidunt hendrerit justo. Praesent nisl dui, mollis vitae quam eu, dignissim faucibus lorem. Sed vitae erat at sem suscipit laoreet nec vel diam.
+以降，手順1 で収集するデータの詳細について述べる。<br>
+<br>
+①製造<br>
+【入力データ】<br>
+生コン工場の情報（所在地，ミキサの容量・種類，コルゲート（各種材料データ，配合一覧），印字記録<br>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-BIQjRd3NGk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+② 運搬<br>
+【入力データ】<br>
+練上がり時間，運搬時間，現場到着時間<br>
+
+③ 受入れ<br>
+【入力データ】<br>
+スランプ，空気量，単位水量，コンクリート温度，外気温，圧縮強度など<br>
+
+④ 圧送<br>
+【入力データ】<br>
+ポンプ車の種類，輸送管の径・延長，圧送圧，圧送速度，吐出量<br>
+
+⑤ 打込み・締固め<br>
+【入力データ】<br>
+打込み位置，締固め箇所・時間，バイブレータの径，本数，打上がり高さ，打重ね時間<br>
+
+⑥ 打継面の処理<br>
+【入力データ】<br>
+打継処理剤の散布量，散布するまでの時間，打継処理を実施した時間<br>
+
+⑦ 仕上げ<br>
+【入力データ】<br>
+仕上げ開始から終了までの時間，コテ仕上げの実施回数<br>
+
+⑧ 養生<br>
+【入力データ】<br>
+型枠の種類・転用回数・脱型までの日数，剥離剤の仕様の有無・種類・塗布方法，膜養生剤<br>
+散布の有無，養生方法<br>
+
+⑨ 検査<br>
+【入力データ】<br>
+表層の出来栄え，ひび割れの有無，シュミットによる反発硬度（受入れ時の圧縮強度と相
+関），<br>
+表層透気・透水係数<br>

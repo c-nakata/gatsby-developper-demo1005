@@ -1,205 +1,61 @@
 ---
-title: 'Misplaced Middleware in Express'
+title: 'コンクリート構造物の打継面評価システムを開発、実工事に適用'
 tags: ["nodejs", "express"]
 published: true
 date: '2018-12-29'
 ---
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sapien nisi, consequat nec dolor ut, lobortis vestibulum nunc. Nulla facilisi. Suspendisse leo urna, pulvinar ut pretium sit amet, consequat eget sapien. Nam ultricies in nulla finibus feugiat. Maecenas lacinia, lorem quis egestas convallis, tortor nunc consectetur est, vel finibus odio dui et nunc. Proin quis ante ut felis lacinia dignissim quis ac risus. Vestibulum a maximus est. Pellentesque malesuada eros ac diam aliquam, non pulvinar magna sodales. Fusce hendrerit malesuada quam, ut accumsan massa efficitur et. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam vitae ornare sem, eget volutpat mauris. Praesent aliquet condimentum dui non bibendum. Nam dapibus rutrum mi sit amet luctus. Proin id vehicula risus. Nullam dictum, elit sit amet molestie eleifend, felis dolor scelerisque risus, sed dictum odio dolor id justo. Integer consectetur dui non tortor scelerisque, non vulputate sem laoreet:
+###開発の背景と経緯<br>
+
+ コンクリート構造物の打継面は、表面のレイタンスや緩んだ骨材をハイウォッシャー等で除去し、<br>
+ 目粗しを行う必要があります。打継面が適切に処理されないと、コンクリート構造物としての一<br>
+ 体性が損なわれ、漏水や構造的な欠陥につながります。また、かぶり部においては、水や塩分等<br>
+ の劣化因子が浸透しやすくなり、鉄筋を腐食させて構造物の早期劣化を引き起こしてしまいます。<br>
+ このように、打継面の処理状態が構造物の機能・性能に大きな影響を与えるにもかかわらず、<br>
+ これまで、処理状態の良否を定量的に判定する基準がありませんでした。<br>
+ そのため、目視で感覚的に評 価され、不十分な処理や過剰な処理が行われているケースもありま<br>
+ した。<br>
 
 
-```
-const express = require('express')
-const app = express()
-const bodyParser = require('body-parser')
+###システムの概要<br>
+開発にあたっては、打継面の凹凸の状態、粗骨材の露出状態によって異なる輝度分布に着目しました。<br>
+打継面処理が不十分な面では、凹凸が少なく輝度の違いが小さいため一点に集中した輝度分布を示し、<br>
+打継面処理が良好な面では、幅広い輝度分布を示します。<br>
 
-const cors = require('cors')
-
-const mongoose = require('mongoose')
-mongoose.connect(process.env.DB_URI || 'mongodb://localhost/dbname' )
-
-app.use(cors())
-
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
-
-
-app.use(express.static('public'))
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/index.html')
-});
-
-
-// Not found middleware
-app.use((req, res, next) => {
-  return next({status: 404, message: 'not found'})
-})
-
-
-const listener = app.listen(process.env.PORT || 3000, () => {
-  console.log('Your app is listening on port ' + listener.address().port)
-})
-```
-
+本システムは、打継面処理が不十分な箇所を「その場で」「瞬時に」検出できるシステムです。<br>
+タブレット端末を用いて撮影した画像に対し、アプリケーションで評価する範囲を選択すると、<br>
+任意のメッシュごとに、処理が十分な箇所は「青」、不十分な箇所は「黄」、「赤」で段階的に表示<br>
+します。判定結果は、評価対象範囲を選択してから5～10秒程度で表示されます。
 <br>
 
-Nunc blandit purus sit amet justo vehicula, at venenatis ante tempus. Integer sagittis ultrices lorem, ut faucibus erat molestie quis. Phasellus semper orci nisl, egestas maximus risus porta sit amet. Fusce vitae egestas sem. Nunc sagittis, erat sodales maximus tempus, magna diam iaculis ex, ut feugiat odio libero sit amet lectus. Suspendisse elit turpis, volutpat laoreet consequat ac, ultricies eu sem. Donec non orci in justo porta iaculis. Donec pulvinar nunc quis viverra volutpat. Quisque et orci non enim sodales eleifend. Etiam in enim id nulla posuere lacinia. Ut rutrum pharetra nisi quis feugiat. Cras arcu lectus, euismod a lacinia a, cursus vitae magna. Aenean ultricies, enim id pharetra ultricies, ligula lectus congue tellus, ac lobortis ex elit at nulla. Sed lobortis vitae tortor sed laoreet. Praesent porta bibendum ullamcorper:
+###システムの効果
+打継面の処理状態を見える化することで、社員や作業員の経験によらず、「誰でも」<br>
+「どこでも」一定の基準で打継面の処理状態を良否判定できるため、<br>
+打継面の品質を確保・向上することができます。また、施工管理の迅速化・効率化が期待できます。
+
+###今後の展開
+様々な現場への適用により、集積したデータを機械学習に用いて判定精度を向上することや、<br>
+ドローンに搭載して広い面積を簡易に判定すること等を目指してシステムのブラッシュアッ<br>
+プを図り、コンクリート構造物の品質向上に努めていきます。また、本システムを用いて、<br>
+発注者との確認やプロセス検査を遠隔臨場で実施する等、活用範囲の拡大を目指します。<br>
+
+#####工事概要
+工事名	　：　成瀬ダム堤体打設工事（第1期）<br>
+工事場所	：　秋田県雄勝郡東成瀬村<br>
+発注者	　：　国土交通省東北地方整備局<br>
+施工者	　：　鹿島・前田・竹中土木特定建設工事共同企業体<br>
+工事諸元	：　台形CSGダム、堤高114.5m、堤頂長755m、堤体積4,850,000m3<br>
+工期	　　：　2018年5月～2022年12月<br>
 
 
-```
-// Not found middleware
-app.use((req, res, next) => {
-  return next({status: 404, message: 'not found'})
-})
+工事名	　：　京都線・千里線淡路駅周辺連続立体交差工事（第4工区）に伴う2019年度土木工事<br>
+工事場所	：　大阪市東淀川区<br>
+発注者	　：　阪急電鉄株式会社<br>
+施工者	　：　鹿島・戸田特定建設工事共同企業体<br>
+工事諸元	：　ラーメン高架橋（幅:13m～28m、高さ:17m～23m）、2層トラス橋2橋（60m、77m）<br>
+工期	　　：　2019年9月～2021年1月<br>
 
-app.post('/api/users/new-user', (req, res) =>{
- const firstName = req.body.first_name;
- const lastName  = req.body.last_name;
- res.json({first_name: firstName, last_name: lastName, "status": "registered"});
-})
-```
-<br>
-
-Integer fermentum euismod risus, vitae fringilla erat condimentum at. Suspendisse luctus egestas dui, eu dictum sem tincidunt sed. Sed efficitur eget orci eu dictum. Etiam faucibus, enim nec tincidunt sollicitudin, diam neque ultricies magna, eget ultrices sem tortor non justo. Vestibulum viverra tincidunt elit sit amet gravida. Morbi sed tempus odio. Nunc efficitur ultricies elit et porta. Praesent finibus placerat felis, vitae efficitur ligula sagittis non. Nam fringilla malesuada ligula ullamcorper dignissim.
-
-
-```
-app.use((req, res, next) => {
-  console.log('fire 1')
-  return next({status: 404, message: 'not found'})
-});
-
-app.post('/api/users/new-user', (req, res) =>{
-  console.log('fire 2')
-  const firstName = req.body.first_name;
-  const lastName  = req.body.last_name;
-  res.json({first_name: firstName, last_name: lastName, "status": "registered"});
-});
-
-```
-<br>
-
-Morbi mauris lacus, vehicula eget ullamcorper et, fringilla at ipsum. Nam tempus felis ex, congue varius urna consectetur eget. Cras tempor condimentum accumsan. In hac habitasse platea dictumst. Nulla pharetra mauris enim, quis dictum ipsum dictum sed. Sed luctus eros volutpat, luctus augue et, tempus ante:
-
-
-```
-Your app is listening on port 3000
-fire 1
-[object Object]
-
-```
-<br>
-
-Sed imperdiet diam id luctus faucibus. Sed ullamcorper suscipit arcu, in dictum lectus ultricies et. Donec accumsan a ipsum sed aliquet. Nulla auctor justo eget tincidunt egestas. Cras blandit, ante vitae facilisis hendrerit, justo mauris fermentum diam, id congue diam velit eu ipsum. Nullam pulvinar auctor tincidunt. Maecenas felis velit, bibendum ac purus nec, cursus lacinia nulla. Sed posuere orci sapien, id accumsan eros feugiat vel. Aenean convallis lacinia orci. In metus elit, iaculis vitae nisi vel, iaculis vehicula mi.
-
-
-```
-// not-found middleware
-app.use((req, res, next) => {
-  console.log('fire 1')
-  return next({status: 404, message: 'not found'})
-});
-
-// error-handler middleware
-app.use((err, req, res, next) => {
-  console.log('fire 2')
-  console.log(err);
-  let errCode, errMessage
-
-  if (err.errors) {
-    // mongoose validation error
-    errCode = 400 // bad request
-    const keys = Object.keys(err.errors)
-    // report the first validation error
-    errMessage = err.errors[keys[0]].message
-  } else {
-    // generic or custom error
-    errCode = err.status || 500
-    errMessage = err.message || 'Internal Server Error'
-  }
-  res.status(errCode).type('txt')
-    .send(errMessage)
-});
-
-app.post('/api/users/new-user', (req, res) =>{
-  console.log('fire 3')
-  const firstName = req.body.first_name;
-  const lastName  = req.body.last_name;
-  res.json({first_name: firstName, last_name: lastName, "status": "registered"});
-});
-```
-<br>
-
-Nam elementum augue vel nulla consectetur elementum. Curabitur tincidunt hendrerit justo. Praesent nisl dui, mollis vitae quam eu, dignissim faucibus lorem:
-
-
-```
-Your app is listening on port 3000
-fire 1
-fire 2
-{ status: 404, message: 'not found' }
-
-```
-<br>
-
-Sed vitae erat at sem suscipit laoreet nec vel diam. Donec at quam sapien. Nulla quis egestas metus, ut tempus elit. Vivamus placerat diam ac ultrices finibus. Aenean vitae molestie eros. Curabitur pulvinar ornare est volutpat consequat. Vivamus ullamcorper pharetra leo ac volutpat. Curabitur efficitur egestas posuere. Duis ut sagittis diam, sed sollicitudin lectus. Phasellus in lorem maximus, volutpat felis non, fringilla mi. Curabitur in fringilla sem, nec rhoncus elit. Aenean non ante dignissim elit suscipit hendrerit sit amet nec eros. Curabitur feugiat, metus non convallis scelerisque, nisl urna imperdiet velit, eget semper enim ante eget lorem.
-
-
-```
-app.post('/api/users/new-user', (req, res) =>{
-  console.log('fire 1')
-  const firstName = req.body.first_name;
-  const lastName  = req.body.last_name;
-  res.json({first_name: firstName, last_name: lastName, "status": "registered"});
-});
-
-
-// Not found middleware
-app.use((req, res, next) => {
-  console.log('fire 2')
-  return next({status: 404, message: 'not found'})
-});
-
-// Error Handling middleware
-app.use((err, req, res, next) => {
-  console.log('fire 3')
-  console.log(err);
-  let errCode, errMessage
-
-  if (err.errors) {
-    // mongoose validation error
-    errCode = 400 // bad request
-    const keys = Object.keys(err.errors)
-    // report the first validation error
-    errMessage = err.errors[keys[0]].message
-  } else {
-    // generic or custom error
-    errCode = err.status || 500
-    errMessage = err.message || 'Internal Server Error'
-  }
-  res.status(errCode).type('txt')
-    .send(errMessage)
-})
-```
-<br>
-
-Nulla pharetra mauris enim, quis dictum ipsum dictum sed. Sed luctus eros volutpat, luctus augue et, tempus ante. Sed imperdiet diam id luctus faucibus. Sed ullamcorper suscipit arcu, in dictum lectus ultricies et. Donec accumsan a ipsum sed aliquet. Nulla auctor justo eget tincidunt egestas:
-
-
-```
-Your app is listening on port 3000
-fire 1
-
-```
-<br>
-
- Donec at quam sapien. Nulla quis egestas metus, ut tempus elit. Vivamus placerat diam ac ultrices finibus. Aenean vitae molestie eros. Curabitur pulvinar ornare est volutpat consequat. Vivamus ullamcorper pharetra leo ac volutpat. Curabitur efficitur egestas posuere.
-
-
-```
-{"first_name":"Walter","last_name":"White","status":"registered"}
-```
-<br>
-
-consectetur elementum.
+（参考）<br>
+動画像分析を活用したコンクリートの全量受入れ管理システムを開発<br>
+（2019年12月25日プレスリリース）<br>

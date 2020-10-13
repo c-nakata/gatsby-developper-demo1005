@@ -1,12 +1,28 @@
 ---
-title: 'Welcome To My Web Developer Blog'
+title: '今後の展開'
 tags: ["react", "vscode", "git", "css", "python", "ruby", "java", "angular", "html", "php", "mongodb", "graphql", "gatsby" ]
 published: true
 date: '2018-08-20'
 ---
 
-This blog template is designed for web developers. Whether you're a professional web developer or are just getting started in the world of web development, this Gatsby starter is ready to go, right out the of box. Its minimalist design makes it easy to tailor to your needs. But, you'll definitely want to make use of the tech tags and developer social media links, and maybe even make some of your own.
-<br>
+コンクリート@iは、製造、運搬、受入、打込み・締固め、仕上げ、打継面の処理、養生、検査と<br>
+いったコンクリート工事の一連の作業の中で、コンクリートの状態をリアルタイムでデータ化・<br>
+見える化し、その場で状況に応じたアクションを起こせるようにするシステムです。<br>
+そのうえで、データに基づいたPDCA活動を実践し、構造物の品質を確保・向上させます。<br>
+各ステップで、既にある技術も活用しつつ、必要な技術開発を順次行っており、<br>
+鋭意このプラットフォームにデータを蓄積していきます。<br>
+
+現場で蓄積されたデータや得られた知見・ノウハウを、クラウドオペレーションシステムに蓄積<br>
+していきます。<br>
+もちろん、一つの現場に関わらず、様々な現場のデータ・情報を集積し、配合データベースや施<br>
+工データベースを強化していきます。これを分析して，適切な配合や施工方法の提案が行えるシ<br>
+ステムを構築します。
+
+分析結果に基づく、配合や施工方法、改善策を現場に提案し、施工に反映させます。<br>
+これを繰り返すことで、最終的には、これまで「人」に蓄積されてきた知識・知見を、データと<br>
+して全社で共有し、さらに、昇華させることで，弊社が施工するコンクリート構造物の品質を向<br>
+上させていきます。<br>
+
 
 ![](../../../src/images/gatsby-icon.png)
 

@@ -2,11 +2,11 @@
 
 module.exports = {
   url: "https://developer-diary.netlify.com",
-  title: "Developer Diary",
-  tagline: "Autodidact developer and sometimes hoop-jumper",
+  title: "Data platform TIPS demo",
+  tagline: "データプラットフォームの構築",
   copyright: "© 2019 willjw3, All rights reserved",
   author: {
-    name: "WILL JAY",
+    name: "Concrete@i",
     bio: "Self-taught web developer and whisky aficionado",
     contacts: {
       linkedin: "https://www.linkedin.com/in/will-ward-65234a170/",
