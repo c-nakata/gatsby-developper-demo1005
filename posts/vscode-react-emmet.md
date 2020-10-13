@@ -1,10 +1,11 @@
 ---
-title: '１．手順１について'
-tags: ["react", "vscode"]
+tags:
+  - react
+  - vscode
 published: true
-date: '2019-03-20'
+date: 2019-03-20
+title: １．手順１について
 ---
-
 以降，手順1 で収集するデータの詳細について述べる。<br>
 <br>
 ①製造<br>
@@ -45,3 +46,7 @@ date: '2019-03-20'
 表層の出来栄え，ひび割れの有無，シュミットによる反発硬度（受入れ時の圧縮強度と相
 関），<br>
 表層透気・透水係数<br>
+
+
+
+![](public\static\4a9773549091c227cd2eb82ccd9c5e3a/kousou.png "適用イメージ")
